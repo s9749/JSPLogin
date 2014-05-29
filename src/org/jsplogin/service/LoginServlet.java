@@ -21,13 +21,12 @@ public class LoginServlet extends HttpServlet {
      */
     public LoginServlet() {
         super();
-        // TODO Auto-generated constructor stub
     }
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		try
 		{	 
 		     BeanUser user = new BeanUser();
@@ -48,8 +47,7 @@ public class LoginServlet extends HttpServlet {
 		} 
 		catch (Throwable theException) 	    
 		{
-		     System.out.println(theException + "ELO"); 
+		     System.out.println(theException); 
 		}
 	}
-
 }

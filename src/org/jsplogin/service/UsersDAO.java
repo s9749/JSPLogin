@@ -34,7 +34,6 @@ public class UsersDAO {
 				
 				bean.setValid(false); 
 			} 
-			
 			//jesli jest (weryfikacja pozytywna)
 			else if (more) { 
 				String firstName = rs.getString("FirstName"); 
@@ -45,9 +44,8 @@ public class UsersDAO {
 				bean.setValid(true); 
 			} 
 		} 
-		
 		catch (Exception ex) { 
-			System.out.println("Log In failed: An Exception has occurred! " + ex); 
+			System.out.println("Błąd logowania! Wyjątek: " + ex); 
 		} 
 		//obsluga bledow polaczenia
 		finally { 
@@ -58,7 +56,6 @@ public class UsersDAO {
 				catch (Exception e) {} 
 				rs = null; 
 			}
-			
 			if (stmt != null) { 
 				try { 
 						stmt.close(); 
@@ -66,7 +63,6 @@ public class UsersDAO {
 				catch (Exception e) {} 
 				stmt = null; 
 			} 
-			
 			if (currentCon != null) { 
 				try { 
 					currentCon.close(); 
