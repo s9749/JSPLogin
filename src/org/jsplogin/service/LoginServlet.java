@@ -39,11 +39,11 @@ public class LoginServlet extends HttpServlet {
 		     {
 		          HttpSession session = request.getSession(true);	    
 		          session.setAttribute("currentUser",user); 
-		          response.sendRedirect("userLogged.jsp"); //zalogowany      		
+		          response.sendRedirect("userLogged.jsp");   		
 		     }
 			        
 		     else 
-		          response.sendRedirect("invalidLogin.jsp"); //blad logowania
+		          response.sendRedirect("invalidLogin.jsp");
 		} 
 		catch (Throwable theException) 	    
 		{
